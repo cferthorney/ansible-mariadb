@@ -1,0 +1,12 @@
+- name: CentOS Based Operating Systems
+  sudo: yes
+  include_vars: "yum.yml"
+  include: tasks/yum-tasks.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Debian Based Operating Systems
+  sudo: yes
+  include_vars: "deb.yml"
+  include: tasks/deb-tasks.yml
+  when:  ansible_os_family == "Debian" and (ansible_distribution_release == "wheezy" or ansible_distribution_release == "squeeze")
+

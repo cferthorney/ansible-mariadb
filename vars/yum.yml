@@ -1,0 +1,7 @@
+---
+mariadb:
+  repourl: 'http://yum.mariadb.org/10.0/{{ ansible_distribution }}{{ ansible_distribution_major_version }}}-amd64'
+  gpgkey: 'https://yum.mariadb.org/RPM-GPG-KEY-MariaDB'
+  daemon: 'mysqld'
+  config_file: /etc/my.cnf
+  socket: /var/lib/mysql/mysql.sock
