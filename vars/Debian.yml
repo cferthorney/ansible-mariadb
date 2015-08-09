@@ -1,13 +1,11 @@
 ---
-mariadb:
+- mariadb:
   repourl: 'deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/{{ ansible_distribution }} {{ ansible_distribution_release }} main'
   gpg_key: '0xcbcb082a1bb943db'
   daemon: mysql
   config_file: /etc/mysql/my.cnf
   socket: /var/run/mysqld/mysqld.sock
-
-__mysql_packages:
-  - mysql-common
-  - mysql-server
-  - python-mysqldb
-
+  packages:
+    mariadb-common
+    mariadb-server
+    python-mysqldb

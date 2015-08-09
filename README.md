@@ -1,7 +1,7 @@
 MariaDB
 =========
 
-Installs MariaDB
+Installs MariaDB 10.  Uses Maria Foundation's [own repositories](http://mariadb.org/mariadb/repositories/) using UK mirrors where possible.
 
 Requirements
 ------------
@@ -28,7 +28,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: cferthorney.mariadb }
 
 License
 -------

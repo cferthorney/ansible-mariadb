@@ -5,3 +5,7 @@ mariadb:
   daemon: 'mysqld'
   config_file: /etc/my.cnf
   socket: /var/lib/mysql/mysql.sock
+  packages:
+    - mariadb
+    - mariadb-server
+    - MySQL-python

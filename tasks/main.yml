@@ -1,12 +1,23 @@
+---
+- name: Define mysql_packages.
+  set_fact:
+    mysql_packages: "{{ __mysql_packages | list }}"
+  when: mysql_packages is not defined
+
+- name: Define mysql_daemon.
+  set_fact:
+    mysql_daemon: "{{ __mysql_daemon }} "
+  when: mysql_daemon is not defined
+
 - name: CentOS Based Operating Systems
   sudo: yes
-  include_vars: "yum.yml"
-  include: tasks/yum-tasks.yml
+  include_vars: "RedHat.yml"
+  include: RedHat-tasks.yml
   when: ansible_os_family == 'RedHat'
 
 - name: Debian Based Operating Systems
   sudo: yes
-  include_vars: "deb.yml"
-  include: tasks/deb-tasks.yml
-  when:  ansible_os_family == "Debian" and (ansible_distribution_release == "wheezy" or ansible_distribution_release == "squeeze")
+  include_vars: "Debian.yml"
+  include: Debian-tasks.yml
+  when:  ansible_os_family == "Debian" and (ansible_distribution_release == "wheezy" or ansible_distribution_release == "jessie")
 

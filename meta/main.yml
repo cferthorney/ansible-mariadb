@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: cferthorney
-  description: Nginx installation for Linux/UNIX.
+  description: MariaDB installation for Linux/UNIX.
   license: "license (BSD, MIT)"
   min_ansible_version: 1.4
   platforms:
