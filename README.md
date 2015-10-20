@@ -38,4 +38,4 @@ BSD
 Author Information
 ------------------
 
-David Thorne [cferthorney](https://github.com/cferthorney)
+This was created in 2015 by David Thorne [cferthorney](https://www.davidthorne.net) with influence from [Ansible for DevOps](http://ansiblefordevops.com/) by [Jeff Geerling](http://jeffgeerling.com/)
